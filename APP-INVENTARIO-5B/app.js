@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const personasRoutes = require('./routes/persona.routes');
+const productoRoutes = require('./routes/producto.routes');
 
 const app = express();
 const PORT = 3000;
@@ -9,6 +10,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 app.use('/api/personas', personasRoutes);
+app.use('/api/productos', productoRoutes);
 
 // Conexión a la base de datos
 mongoose.connect('mongodb+srv://20233tn112:VaNJ25041003@firstcluster.qxah3.mongodb.net/inventario-db?retryWrites=true&w=majority&appName=FirstCluster', {useNewUrlParser: true, useUnifiedTopology: true})

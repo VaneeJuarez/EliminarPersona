@@ -6,10 +6,10 @@ class PersonaRepository {
     return await Persona.find();
   }
 
-  // Buscar una persona por id
-  async getPersonaById(id) {
+  //Buscar una persona por id
+  async getPersonaById(id){
     return await Persona.findById(id);
-  }
+}
 
   // Buscar una persona por RFC
   async getPersonaByRFC(rfc) {

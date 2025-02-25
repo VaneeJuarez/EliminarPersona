@@ -9,7 +9,7 @@ class PersonaService {
 
     async getPersonaById(id){
         const persona = await PersonaRepository.getPersonaById(id);
-        if (!persona) {
+        if(!persona){
             throw new Error('Persona no encontrada');
         }
 
